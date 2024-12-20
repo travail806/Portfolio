@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio - Ton Nom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f5f5f5;
+    }
+
+    
+    #home {
+      background: linear-gradient(135deg, #3498db, #8e44ad);
+      color: white;
+      text-align: center;
+      padding: 120px 0;
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    #home h1 {
+      font-size: 3rem;
+      opacity: 0;
+      animation: slideUp 1s forwards 0.5s;
+    }
+
+    #home .cta-btn {
+      background-color: #fff;
+      color: #3498db;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1s forwards 1s;
+    }
+
+    #home .cta-btn:hover {
+      transform: scale(1.1);
+    }
+
+    
+    #about {
+      padding: 60px 0;
+      background: #fff;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards 1.5s;
+    }
+
+    #about h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    #about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-top: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    
+    #skills {
+      padding: 60px 0;
+      background: #f4f4f4;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards 2s;
+    }
+
+    #skills h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    
+    .progress-bar {
+      background: #ddd;
+      border-radius: 25px;
+      height: 10px;
+    }
+
+    .progress {
+      background: #3498db;
+      border-radius: 25px;
+      height: 100%;
+      width: 0; 
+      transition: width 2s ease-in-out;
+    }
+
+    
+    #projets {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    #projets h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .projets-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .projet-card {
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      border-radius: 10px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+      cursor: pointer;
+    }
+
+    .projet-card:hover {
+      transform: scale(1.05);
+    }
+
+    .projet-card.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .projet-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .projet-btn {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .projet-btn:hover {
+      transform: scale(1.1);
+    }
+
+    
+    #contact {
+      background: #3498db;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    #contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    #contact form {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #contact input,
+    #contact textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 5px;
+      transition: border 0.3s ease;
+    }
+
+    #contact input:focus,
+    #contact textarea:focus {
+      border: 2px solid #8e44ad;
+    }
+
+    #contact button {
+      background-color: #8e44ad;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+    }
+
+    #contact button:hover {
+      background-color: #3498db;
+    }
+
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <section id="home">
+    <div class="intro">
+      <h1>Bienvenue sur mon Portfolio <span>DANTAL Olivier</span></h1>
+      <p>Actuellement en 1ère année BTS SIO</p>
+      <a href="#projets" class="cta-btn">Voir mes projets</a>
+    </div>
+  </section>
+
+  
+  <section id="about">
+    <div class="container">
+      <h2>À propos de moi</h2>
+      <p>Je suis actuellement en 1ère année de BTS SIO. J'ai réaliser différents projet le long de l'année comme la création d'une page web KOO de fourchette ou encore un portfolio.</p>
+      <p>Je travaille principalement avec les technologies suivantes : HTML, CSS, JavaScript et PHP.</p>
+    </div>
+  </section>
+
+  
+  <section id="skills">
+    <h2>Mes Compétences</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <img src="C:\Users\user\OneDrive\Images\th.jpg" alt="HTML">
+        <h3>HTML</h3>
+        <div class="progress-bar">
+          <div class="progress html" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <img src="C:\Users\user\OneDrive\Images\th (1).jpg" alt="CSS">
+        <h3>CSS</h3>
+        <div class="progress-bar">
+          <div class="progress css" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <img src="C:\Users\user\OneDrive\Images\OIP (1).jpg" alt="JavaScript">
+        <h3>JavaScript</h3>
+        <div class="progress-bar">
+          <div class="progress js" style="width: 60%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <img src="C:\Users\user\OneDrive\Images\télécharger (2).jpg" alt="PHP">
+        <h3>PHP</h3>
+        <div class="progress-bar">
+          <div class="progress react" style="width: 80%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="projets">
+    <h2>Mes Projets</h2>
+    <div class="projets-container">
+      <div class="projet-card">
+        <img src="C:\Users\user\OneDrive\Images\maquette-koo_2_fourchette.png" alt="Projet 1">
+        <h3>KOO de fourchette</h3>
+        <p>Un site web créé avec HTML et CSS. Ce projet avais pour but de reproduire cette page web qui contient des recettes.</p>
+        <a href="C:\Users\user\OneDrive\Images\maquette-koo_2_fourchette.png" class="project-link">Voir le projet</a>
+      </div>
+      <div class="projet-card">
+        <img src="images/project2.jpg" alt="Projet 2">
+        <h3>Portfolio</h3>
+        <p>Création d'un portfolio.</p>
+        <a href="C:\Users\user\OneDrive\Images\maquette-koo_2_fourchette.png" class="project-link">Voir le projet</a>
+      </div>
+      <div class="projet-card">
+        <img src="images/project3.jpg" alt="Rien">
+        <h3>Rien</h3>
+        <p>Rien pour l'instant</p>
+        <a href="C:\Users\user\OneDrive\Images\maquette-koo_2_fourchette.png" class="project-link">Voir le projet</a>
+      </div>
+    </div>
+  </section>
+
+<section id="documents">
+            <h2>Mes Documents</h2>
+            <a href="C:\Users\user\OneDrive\Images\807cccef1fd8264a80bbae55816b327b.jpg" download="CV">Télécharger mon CV</a>
+        </section>
+
+  
+  <section id="contact">
+    <h2>Contactez-moi</h2>
+    <form id="contact-form">
+      <input type="text" id="nom" placeholder="Votre nom" required>
+      <input type="email" id="email" placeholder="Votre email" required>
+      <textarea id="message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const projets = document.querySelectorAll('.projet-card');
+
+     
+      setTimeout(() => {
+        projets.forEach((projet, index) => {
+          setTimeout(() => {
+            projet.classList.add('fade-in');
+          }, 300 * index);
+        });
+      }, 1000);
+    });
+
+    
+    window.addEventListener('scroll', function() {
+      const progressBars = document.querySelectorAll('.progress');
+      progressBars.forEach(function(bar) {
+        if (isElementInViewport(bar)) {
+          bar.style.width = bar.getAttribute('data-width') + '%';
+        }
+      });
+    });
+
+    function isElementInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+    }
+  </script>
+</body>
+</html>
