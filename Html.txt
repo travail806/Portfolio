@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio - Ton Nom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Section d'accueil -->
+  <section id="home">
+    <div class="intro">
+      <h1>Bonjour, je suis <span>Ton Nom</span></h1>
+      <p>Développeur Web Passionné | Designer | Créateur de Solutions Innovantes</p>
+      <a href="#projets" class="cta-btn">Voir mes projets</a>
+    </div>
+  </section>
+
+  <!-- Section À propos -->
+  <section id="about">
+    <div class="container">
+      <h2>À propos de moi</h2>
+      <p>Je suis un développeur web full-stack, spécialisé dans la création de sites web et d'applications web réactives. Fort de plusieurs années d'expérience, je suis passionné par l'innovation, le design et l'optimisation des performances. J'aime relever des défis techniques et apporter des solutions créatives pour améliorer l'expérience utilisateur. Mon objectif est de vous aider à concrétiser vos idées en des produits web performants et modernes.</p>
+      <p>Je travaille principalement avec les technologies suivantes : HTML, CSS, JavaScript, React, Node.js et PHP. Je suis également un grand fan de design, et je m'efforce toujours de créer des interfaces utilisateur à la fois belles et fonctionnelles.</p>
+    </div>
+  </section>
+
+  <!-- Section Compétences -->
+  <section id="skills">
+    <h2>Mes Compétences</h2>
+    <div class="skills-container">
+      <div class="skill">
+        <img src="icons/html5.svg" alt="HTML5">
+        <h3>HTML5</h3>
+        <div class="progress-bar">
+          <div class="progress html" style="width: 90%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <img src="icons/css3.svg" alt="CSS3">
+        <h3>CSS3</h3>
+        <div class="progress-bar">
+          <div class="progress css" style="width: 85%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <img src="icons/js.svg" alt="JavaScript">
+        <h3>JavaScript</h3>
+        <div class="progress-bar">
+          <div class="progress js" style="width: 80%"></div>
+        </div>
+      </div>
+      <div class="skill">
+        <img src="icons/react.svg" alt="React">
+        <h3>React</h3>
+        <div class="progress-bar">
+          <div class="progress react" style="width: 75%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Projets -->
+  <section id="projets">
+    <h2>Mes Projets</h2>
+    <div class="projets-container">
+      <!-- Projet 1 -->
+      <div class="projet-card">
+        <img src="images/project1.jpg" alt="Projet 1">
+        <h3>Site Web Interactif</h3>
+        <p>Un site web interactif créé avec HTML, CSS et JavaScript. Ce projet visait à offrir une expérience utilisateur fluide et dynamique avec des animations interactives. Le site a été conçu pour être réactif et optimisé pour tous les appareils.</p>
+        <a href="https://www.project1.com" class="projet-btn" target="_blank">Voir le projet</a>
+      </div>
+      <!-- Projet 2 -->
+      <div class="projet-card">
+        <img src="images/project2.jpg" alt="Projet 2">
+        <h3>Application Mobile</h3>
+        <p>UI/UX Design pour une application mobile, avec une interface utilisateur moderne et intuitive. Ce projet a permis d'améliorer l'expérience utilisateur et la navigation sur l'application.</p>
+        <a href="https://www.project2.com" class="projet-btn" target="_blank">Voir le projet</a>
+      </div>
+      <!-- Projet 3 -->
+      <div class="projet-card">
+        <img src="images/project3.jpg" alt="Projet 3">
+        <h3>Application React</h3>
+        <p>Application construite avec React pour des utilisateurs dynamiques, intégration d'API externes et gestion d'état avec Redux. Le projet a été optimisé pour offrir des performances accrues et une expérience utilisateur fluide.</p>
+        <a href="https://www.project3.com" class="projet-btn" target="_blank">Voir le projet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact">
+    <h2>Contactez-moi</h2>
+    <form id="contact-form">
+      <input type="text" id="nom" placeholder="Votre nom" required>
+      <input type="email" id="email" placeholder="Votre email" required>
+      <textarea id="message" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

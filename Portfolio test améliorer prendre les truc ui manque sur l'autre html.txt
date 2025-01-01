@@ -6,10 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio - Ton Nom</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <base href="/Portfolio/">
-
   <style>
-    
+    /* Global Styles */
     body {
       font-family: 'Poppins', sans-serif;
       margin: 0;
@@ -18,7 +16,28 @@
       background-color: #f5f5f5;
     }
 
-    
+    /* Navigation */
+    nav {
+      background-color: #3498db;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #8e44ad;
+    }
+
+    /* Section d'Accueil */
     #home {
       background: linear-gradient(135deg, #3498db, #8e44ad);
       color: white;
@@ -49,7 +68,7 @@
       transform: scale(1.1);
     }
 
-    
+    /* Section À propos */
     #about {
       padding: 60px 0;
       background: #fff;
@@ -72,7 +91,7 @@
       margin-right: auto;
     }
 
-    
+    /* Section Compétences */
     #skills {
       padding: 60px 0;
       background: #f4f4f4;
@@ -93,22 +112,27 @@
       gap: 30px;
     }
 
-    
+    .skill {
+      text-align: center;
+      width: 200px;
+    }
+
     .progress-bar {
       background: #ddd;
       border-radius: 25px;
       height: 10px;
+      margin-top: 10px;
     }
 
     .progress {
       background: #3498db;
       border-radius: 25px;
       height: 100%;
-      width: 0; 
+      width: 0; /* Commence à 0 et s'animera */
       transition: width 2s ease-in-out;
     }
 
-    
+    /* Section Projets */
     #projets {
       padding: 60px 0;
       background: #fff;
@@ -168,7 +192,61 @@
       transform: scale(1.1);
     }
 
-    
+    /* Section Documents */
+    #documents {
+      background: #f4f4f4;
+      padding: 60px 0;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards 2.5s;
+    }
+
+    #documents h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .document-item {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 10px;
+    }
+
+    .document-btn {
+      background-color: #8e44ad;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .document-btn:hover {
+      background-color: #3498db;
+    }
+
+    /* Section Certifications */
+    #certifications {
+      padding: 60px 0;
+      background: #fff;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards 3s;
+    }
+
+    #certifications h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .certification-item {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Section Contact */
     #contact {
       background: #3498db;
       color: white;
@@ -216,7 +294,7 @@
       background-color: #3498db;
     }
 
-    
+    /* Animations */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -239,128 +317,102 @@
   </style>
 </head>
 <body>
-  
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Accueil</a>
+    <a href="#about">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#projets">Projets</a>
+    <a href="#documents">Documents</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Section Accueil -->
   <section id="home">
-    <div class="intro">
-      <h1>Bienvenue sur mon Portfolio <span>DANTAL Olivier</span></h1>
-      <p>Actuellement en 1ère année BTS SIO</p>
-      <a href="#projets" class="cta-btn">Voir mes projets</a>
-    </div>
+    <h1>Bienvenue sur mon Portfolio</h1>
+    <a href="#about" class="cta-btn">Découvrir</a>
   </section>
 
-  
+  <!-- Section À propos -->
   <section id="about">
-    <div class="container">
-      <h2>À propos de moi</h2>
-      <p>Je suis actuellement en 1ère année de BTS SIO. J'ai réalisé différents projets le long de l'année comme la création d'une page web KOO de fourchette ou encore un portfolio.</p>
-      <p>Je travaille principalement avec les technologies suivantes : HTML, CSS, JavaScript et PHP.</p>
-    </div>
+    <h2>À Propos de Moi</h2>
+    <p>
+      Je suis un développeur passionné avec une expertise en création de sites web et d'applications. 
+      Mon objectif est de créer des solutions innovantes et performantes qui répondent aux besoins des utilisateurs.
+    </p>
   </section>
 
-  
+  <!-- Section Compétences -->
   <section id="skills">
     <h2>Mes Compétences</h2>
     <div class="skills-container">
       <div class="skill">
-        <img src="C:\Users\user\OneDrive\Images\th.jpg" alt="HTML">
         <h3>HTML</h3>
         <div class="progress-bar">
-          <div class="progress html" style="width: 90%"></div>
+          <div class="progress" style="width: 90%;"></div>
         </div>
       </div>
       <div class="skill">
-        <img src="C:\Users\user\OneDrive\Images\th (1).jpg" alt="CSS">
         <h3>CSS</h3>
         <div class="progress-bar">
-          <div class="progress css" style="width: 85%"></div>
+          <div class="progress" style="width: 80%;"></div>
         </div>
       </div>
       <div class="skill">
-        <img src="images/OIP (1).jpg" alt="JavaScript">
         <h3>JavaScript</h3>
         <div class="progress-bar">
-          <div class="progress js" style="width: 60%"></div>
-        </div>
-      </div>
-      <div class="skill">
-        <img src="C:\Users\user\OneDrive\Images\télécharger (2).jpg" alt="PHP">
-        <h3>PHP</h3>
-        <div class="progress-bar">
-          <div class="progress react" style="width: 80%"></div>
+          <div class="progress" style="width: 75%;"></div>
         </div>
       </div>
     </div>
   </section>
 
- 
+  <!-- Section Projets -->
   <section id="projets">
     <h2>Mes Projets</h2>
     <div class="projets-container">
       <div class="projet-card">
-        <img src="C:\Users\user\OneDrive\Images\maquette-koo_2_fourchette.png" alt="Projet 1">
-        <h3>KOO de fourchette</h3>
-        <p>Un site web créé avec HTML et CSS. Ce projet avait pour but de reproduire cette page web qui contient des recettes.</p>
-        <a href="C:\Users\user\OneDrive\Images\maquette-koo_2_fourchette.png" class="project-link">Voir le projet</a>
+        <img src="projet1.jpg" alt="Projet 1">
+        <h3>Projet 1</h3>
+        <p>Une description rapide du projet.</p>
+        <a href="#" class="projet-btn">Voir le projet</a>
       </div>
       <div class="projet-card">
-        <img src="images/project2.jpg" alt="Projet 2">
-        <h3>Portfolio</h3>
-        <p>Création d'un portfolio.</p>
-        <a href="C:\Users\user\OneDrive\Images\maquette-koo_2_fourchette.png" class="project-link">Voir le projet</a>
-      </div>
-      <div class="projet-card">
-        <img src="images/project3.jpg" alt="Rien">
-        <h3>Rien</h3>
-        <p>Rien pour l'instant</p>
-        <a href="C:\Users\user\OneDrive\Images\maquette-koo_2_fourchette.png" class="project-link">Voir le projet</a>
+        <img src="projet2.jpg" alt="Projet 2">
+        <h3>Projet 2</h3>
+        <p>Une description rapide du projet.</p>
+        <a href="#" class="projet-btn">Voir le projet</a>
       </div>
     </div>
   </section>
 
-<section id="documents">
-            <h2>Mes Documents</h2>
-            <a href="C:\Users\user\OneDrive\Images\807cccef1fd8264a80bbae55816b327b.jpg" download="CV">Télécharger mon CV</a>
-        </section>
+  <!-- Section Documents -->
+  <section id="documents">
+    <h2>Mes Documents</h2>
+    <div class="document-item">
+      <a href="#" class="document-btn">Télécharger mon CV</a>
+    </div>
+  </section>
 
-  
+  <!-- Section Certifications -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certification-item">
+      <h3>Certification 1</h3>
+      <p>Détails de la certification.</p>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
   <section id="contact">
     <h2>Contactez-moi</h2>
-    <form id="contact-form">
-      <input type="text" id="nom" placeholder="Votre nom" required>
-      <input type="email" id="email" placeholder="Votre email" required>
-      <textarea id="message" placeholder="Votre message" required></textarea>
+    <form>
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" placeholder="Votre email" required>
+      <textarea placeholder="Votre message" required></textarea>
       <button type="submit">Envoyer</button>
     </form>
   </section>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const projets = document.querySelectorAll('.projet-card');
-
-     
-      setTimeout(() => {
-        projets.forEach((projet, index) => {
-          setTimeout(() => {
-            projet.classList.add('fade-in');
-          }, 300 * index);
-        });
-      }, 1000);
-    });
-
-    
-    window.addEventListener('scroll', function() {
-      const progressBars = document.querySelectorAll('.progress');
-      progressBars.forEach(function(bar) {
-        if (isElementInViewport(bar)) {
-          bar.style.width = bar.getAttribute('data-width') + '%';
-        }
-      });
-    });
-
-    function isElementInViewport(el) {
-      const rect = el.getBoundingClientRect();
-      return rect.top <= window.innerHeight && rect.bottom >= 0;
-    }
-  </script>
 </body>
 </html>
